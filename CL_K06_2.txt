@@ -7,7 +7,7 @@ double calcBMI(double height, double weight);
 void main(void){
 	int i;
 	double height,weight,BMI;
-	char type[3][256] = {"やせ","標準","肥満"};
+	char type[3][256] = {"小","中","大"};
 	i = 0;
 	printf("身長を入力してください：");
 	scanf("%lf",&height);
