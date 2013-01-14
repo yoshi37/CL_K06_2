@@ -1,0 +1,33 @@
+﻿/*作成者：1T1(37)　吉田祥*/
+/*課題名：課題 06_2 */
+
+#include<stdio.h>
+double calcBMI(double height, double weight);
+
+void main(void){
+	int i;
+	double height,weight,BMI;
+	char type[3][256] = {"やせ","標準","肥満"};
+	i = 0;
+	printf("身長を入力してください：");
+	scanf("%lf",&height);
+	printf("体重を入力してください：");
+	scanf("%lf",&weight);
+	BMI = calcBMI(height,weight);
+	printf("測定結果：\n");
+	printf("%fcm,%fkg → ",height,weight);
+	if (BMI<18.5){
+		printf("%s体型",type[i]);
+	}else if (18.5<=BMI<25.0){
+		i = i + 1;
+		printf("%s体型",type[i]);
+	}else{
+		i = i + 2;
+		printf("%s体型",type[i]);
+	}	
+}
+
+double calcBMI(double height,double weight,double BMI){
+	BMI = weight / ((height / 100.0)*(height / 100.0));
+	return BMI;
+}
