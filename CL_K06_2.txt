@@ -9,10 +9,10 @@ void main(void){
 	double height,weight,BMI;
 	char type[3][256] = {"小","中","大"};
 	x = 0;
-	printf("身長を入力してください：");
-	scanf("%lf",&height);
 	printf("体重を入力してください：");
 	scanf("%lf",&weight);
+	printf("身長を入力してください：");
+	scanf("%lf",&height);
 	BMI = calcBMI(height,weight);
 	printf("測定結果：\n");
 	printf("%fcm,%fkg → ",height,weight);
